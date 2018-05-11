@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    font-weight: 500;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -66,9 +67,36 @@ p {
     line-height: 1.4;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .container {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.4rem;
+    margin: 2rem 0rem;
+}
+
+.header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.jumbotron .jumbotron-hero {
+    width: 100%;
+    margin: 2rem 0rem;
 }
 
 .top-content {
@@ -77,6 +105,11 @@ p {
     justify-content: space-evenly;
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
+}
+
+.text-container {
+    font-size: 1.6rem;
+
 }
 
 .top-content .text-container {
@@ -110,6 +143,27 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.6rem;
+}
+
+.middle-content .boxes .box-02 {
+    background: forestgreen;
+}
+
+.middle-content .boxes .box-04 {
+    background: darkorchid;
+}
+
+.middle-content .boxes .box-06 {
+    background: hotpink;
+}
+
+.middle-content .boxes .box-08 {
+    background: indigo;
+}
+
+.middle-content .boxes .box-10 {
+    background: lawngreen;
 }
 
 .bottom-content {
@@ -124,6 +178,18 @@ p {
 
 .bottom-content .text-container:last-child {
     padding-right: 0;
+}
+
+.stretch-goals {
+    background: #666666;
+    color: white;
+    display: flex;
+}
+
+.stretch-goals .text-container {
+    width: 48%;
+    padding: 0 1%;
+    padding: 20px 10px;
 }
 
 footer {
@@ -143,4 +209,117 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+/* Tablet View */
+@media (max-width: 768px) {
+
+    .header {
+        flex-wrap: wrap;
+        margin-bottom: 0rem;
+    }
+
+    .header a {
+        margin: auto;
+        margin-bottom: 2.5rem;
+    }
+
+    .header nav a {
+        margin-bottom: 2rem;
+    }
+
+    .middle-content .boxes{
+        flex-wrap: wrap;
+    }
+
+    .middle-content .boxes .box {
+        width: 100px;
+    }
+
+    .middle-content .boxes .box-01 {
+        background: teal;
+    }
+
+    .middle-content .boxes .box-03 {
+        background: gold;
+    }
+
+    .middle-content .boxes .box-05 {
+        background: cadetblue;
+    }
+
+    .middle-content .boxes .box-07 {
+        background: coral;
+    }
+
+    .middle-content .boxes .box-09 {
+        background: crimson;
+    }
+
+    .stretch-goals {
+        flex-direction: column;
+    }
+
+    .stretch-goals .text-container{
+        width: 100%;
+    }
+
+}
+
+}
+
+/* Phone View */
+@media (max-width: 400px) {
+
+    .header .nav {
+        flex-direction: column;
+    }
+
+    .header .nav a:first-child {
+        border-top: 1px solid black;
+        padding-top: ;
+    }
+
+    .header .nav a {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid black;
+        padding: 1.5rem 0;
+        margin: 0;
+    }
+
+    .middle-content .boxes {
+        flex-direction: row-reverse;
+    }
+
+    .middle-content .boxes .box-10 {
+        display: none;
+    }
+
+    .jumbotron .jumbotron-hero{
+        margin-top: 0;
+    }
+
+    .top-content {
+        flex-direction: column;
+    }
+
+    .top-content .text-container {
+        width: 95%;
+        margin: auto;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+    }
+
+    .bottom-content .text-container {
+        width: 100%;
+        margin: auto;
+    }
+
+    footer {
+        margin-top: 4rem;
+    }
+
 }
