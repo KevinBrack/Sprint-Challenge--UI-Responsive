@@ -266,8 +266,6 @@ footer nav a {
 
 }
 
-}
-
 /* Phone View */
 @media (max-width: 400px) {
 
@@ -323,3 +321,9 @@ footer nav a {
     }
 
 }
+
+/*Header Nav Animation*/
+.header a img, .header  nav, .header nav a {
+    transition: all 300ms ease;
+}
+
